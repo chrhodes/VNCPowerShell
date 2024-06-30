@@ -25,7 +25,13 @@ $userInput = Read-Host "Ending ($ending)"
 if ($userInput.Length -gt 0 ){ $ending = $userInput}
 
 
+Write-Host "Creating Folders ..."
+
 for ($i = $startNumber ; $i -le $endNumber ; $i++)
 {
     $folderName + $delimiter + ("{0:d2}" -f $i) + $ending
+	
+	#New-Item -Path . -Name $folderName -ItemType Directory
 }
+
+Read-Host "Press Enter to Exit"

@@ -21,7 +21,7 @@ Be sure to leave two blank lines after end of block comment.
 
 param
 (
-	[switch] $Error,
+	[switch] $ErrorX,
 	[switch] $Warning,
 	[switch] $Info,
 	[switch] $Debug,
@@ -35,7 +35,7 @@ param
 
 function Main
 {
-	if ($Error)
+	if ($ErrorX)
 	{
 		VNCLogError
 	}
@@ -99,7 +99,7 @@ function VNCLogTrace1()
 
 function TestAll()
 {
-	Call-VNCLog -Error -message "Error Message"
+	Call-VNCLog -ErrorX -message "Error Message"
 	Call-VNCLog -Warning -message "Warning Message"
 	Call-VNCLog -Info    -message "Info Message"
 	Call-VNCLog -Debug   -message "Debug Message"

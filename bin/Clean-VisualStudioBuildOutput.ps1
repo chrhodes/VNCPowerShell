@@ -58,6 +58,7 @@ function Main
     if ($SCRIPT:Verbose)
     {
 		"SCRIPTPATH         = $SCRIPTPATH"
+        "SCRIPTNAME         = $SCRIPTNAME"
         # "SwitchArg1         = $SwitchArg1"
         # "SwitchArg2         = $SwitchArg2"
         # "StringArg1         = $StringArg1"

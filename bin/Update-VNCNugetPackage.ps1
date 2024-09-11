@@ -306,13 +306,13 @@ function LogMessage()
         
         "Warning"
         { 
-            Write-Host $message
+            Write-Host -ForegroundColor Yellow $message
             if ($SCRIPT:UseVNCLog) { Call-PLLog -Warning -message $message -class "Process-DLPFiles" -method $method }
             break
         }
         "Error"
         { 
-            Write-Host $message
+            Write-Host -ForegroundColor Red $message
             if ($SCRIPT:UseVNCLog) { Call-PLLog -Error   -message $message -class "Process-DLPFiles" -method $method }
             break
         }

@@ -75,15 +75,17 @@ Be sure to leave two blank lines after end of block comment.
 # Script Level Parameters.
 ##############################################
 
+# Use CmdletBinding for common defaults, e.g. Verbose
+[CmdletBinding()]
 param
 (
 # <TODO: Add script level parameters>
-    [switch] $SwitchArg1,
-    [switch] $SwitchArg2,
-    [string] $StringArg1         = "DefaultValueStringArg1", 
-    [string] $StringArg2,
-	[switch] $Contents,
-    [switch] $Verbose
+    [switch] $SwitchArg1
+    , [switch] $SwitchArg2,
+    , [string] $StringArg1         = "DefaultValueStringArg1", 
+    , [string] $StringArg2,
+	, [switch] $Contents,
+    # , [switch] $Verbose   # Cannot use if using CmdletBinding
 )
 
 ##############################################    
